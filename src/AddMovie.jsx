@@ -27,10 +27,9 @@ function AddMovie({movies,setmovies}) {
 
   return (
     <>
-    <Button variant="primary" onClick={handleShow}>
+     <Button variant="primary" onClick={handleShow}>
         Add Movie
       </Button>
-
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>Add Movie</Modal.Title>
@@ -67,7 +66,9 @@ function AddMovie({movies,setmovies}) {
           </Button>
         </Modal.Footer>
       </Modal>
+    
     </>
+    
   )
 }
 

@@ -25,12 +25,19 @@ function MovieList({}) {
   return (
     <div style={{ display: 'flex', alignItems:"center",flexDirection:"column",padding:"2vw",gap:"40px"}}> 
     <h3>Liste of Movies</h3>
-    <input ref={R5} type='text' placeholder='search for a product' onChange={filterdMovie}></input>
-    <input ref={R6} type='text' placeholder='search for a rate' onChange={filterdMoviebyrate}></input>
+    <span>
+    <input ref={R5} type='text' placeholder='search for a product' onChange={filterdMovie}>
+      
+    </input> <input ref={R6} type='text' placeholder='search for a rate' onChange={filterdMoviebyrate}></input>
+    </span>
     <div style={{ display: 'flex' , gap:"40px"}}>
-       {filtredMovie.map(e=><MovieCard item={e}></MovieCard>)}
-   
+
+       {filtredMovie.map((e,index)=><MovieCard item={(e,index)}></MovieCard>)}
+     
+
       <AddMovie movies={movies} setmovies={setFiltred}></AddMovie>
+    
+
       </div>
     </div>
   )
