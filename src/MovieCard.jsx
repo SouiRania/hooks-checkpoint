@@ -3,12 +3,11 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { NavLink } from 'react-router-dom';
 
-function MovieCard({item,index}) {
+function MovieCard({item}) {
  
   return (
     <div style={{ display: 'flex'}}>
 
-      <NavLink to={index}>
 
       <Card style={{ width: '18rem'}}>
       <Card.Img variant="top" src={item.posterURL} width="300" height="300"/>
@@ -21,8 +20,6 @@ function MovieCard({item,index}) {
         <Button variant="primary">{item.rating}</Button>
       </Card.Body>
     </Card>
-
-    </NavLink>
     </div>
   )
 }

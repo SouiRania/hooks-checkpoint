@@ -32,7 +32,7 @@ function MovieList({}) {
     </span>
     <div style={{ display: 'flex' , gap:"40px"}}>
 
-       {filtredMovie.map((e,index)=><MovieCard item={(e,index)}></MovieCard>)}
+       {filtredMovie.map(e=><MovieCard item={e}></MovieCard>)}
      
 
       <AddMovie movies={movies} setmovies={setFiltred}></AddMovie>
